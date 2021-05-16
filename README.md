@@ -8,7 +8,7 @@ Dispatch to vectorized function based on the capability available at runtime.
 2. 256-bit integer instructions.
 3. Floating-point fused multiply-add instructions and gather operations.
 
-This Dispatcher aims to dispatch the operation to the capability depending on your CPU during the runtime itself. If AVX2 is supported and demanded (`use_cpu` is not set to `true`), then the operator will be dispatched to AVX2 instruction set (see [supported operators](#Supported Operators) section).
+This Dispatcher aims to dispatch the operation to the capability depending on your CPU during the runtime itself. If AVX2 is supported and demanded (`use_cpu` is not set to `true`), then the operator will be dispatched to AVX2 instruction set (see [supported operators](#supported-operators) section).
 
 ## Build Instructions
 
@@ -25,7 +25,7 @@ $ ./test_bin  # Run tests
 
 ## Usage
 
-As of Release 0.0.1, the Dispatcher supports arrays of size 4 and [operators](#Supported Operators) operation for both AVX2 and SIMT instruction sets. Here is a sample code to start with: (also check `main.cpp` for complete template)
+As of Release 0.0.1, the Dispatcher supports arrays of size 4 and [operators](#supported-operators) operation for both AVX2 and SIMT instruction sets. Here is a sample code to start with: (also check `main.cpp` for complete template)
 
 Let's start with the necessary header files.
 
@@ -43,7 +43,7 @@ Dispatcher op_dispatcher = Dispatcher{};
 Dispatcher cpu_dispatcher = Dispatcher{};
 ```
 
-In order to allow `cpu_dispatcher` to use CPU, you need to set `use_cpu` flag (default is `false`): `cpu_dispatcher.use_cpu = true`. Now since the arrays and dispatchers are initialized, go ahead and dispatch the op (`mul` for example, see [supported operators section](#Supported Operators)):
+In order to allow `cpu_dispatcher` to use CPU, you need to set `use_cpu` flag (default is `false`): `cpu_dispatcher.use_cpu = true`. Now since the arrays and dispatchers are initialized, go ahead and dispatch the op (`mul` for example, see [supported operators section](#supported-operators)):
 
 ```cpp
 op_dispatcher.binary_dispatch(avx2::mul, cpu::mul)(x, y);
