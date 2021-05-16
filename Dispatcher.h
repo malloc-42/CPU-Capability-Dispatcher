@@ -2,7 +2,7 @@
 
 struct Dispatcher
 {
-    
+
     using Arr = std::array<double, 4>;
     bool use_cpu = false;
 
@@ -11,7 +11,8 @@ struct Dispatcher
         cpuinfo_initialize();
     }
 
-    Dispatcher(bool use_cpu): use_cpu(use_cpu){
+    Dispatcher(bool use_cpu) : use_cpu(use_cpu)
+    {
         cpuinfo_initialize();
     }
 
@@ -27,5 +28,4 @@ struct Dispatcher
             return cpu_op(x, y);
         };
     }
-
 };
