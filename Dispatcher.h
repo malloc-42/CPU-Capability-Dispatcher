@@ -11,11 +11,6 @@ struct Dispatcher
         cpuinfo_initialize();
     }
 
-    Dispatcher(bool use_cpu) : use_cpu(use_cpu)
-    {
-        cpuinfo_initialize();
-    }
-
     template <typename AVXFunc, typename CPUFunc>
     auto binary_dispatch(AVXFunc avx_op, CPUFunc cpu_op)
     {

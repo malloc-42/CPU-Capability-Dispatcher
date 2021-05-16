@@ -6,7 +6,8 @@
 int main()
 {
     Dispatcher op_dispatcher = Dispatcher{};
-    Dispatcher cpu_dispatcher = Dispatcher{true};
+    Dispatcher cpu_dispatcher = Dispatcher{};
+    cpu_dispatcher.use_cpu = true;
 
     std::array<double, 4> x = {4.0, 3.0, 2.0, 1.0};
     std::array<double, 4> y = {3.0, 0.0, 1.0, 0.0};
