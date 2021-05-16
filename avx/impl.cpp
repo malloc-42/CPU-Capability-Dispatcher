@@ -1,4 +1,4 @@
-#include "avx_interface.h"
+#include "interface.h"
 #include <x86intrin.h>
 
 namespace avx2{
