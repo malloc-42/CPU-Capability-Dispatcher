@@ -4,7 +4,7 @@ project (CPUDispatch)
 
 add_subdirectory (cpu)
 add_subdirectory (avx)
-add_subdirectory (cpuinfo)
+add_subdirectory (cpuinfo EXCLUDE_FROM_ALL)
 
 add_executable(test_bin main.cpp)
 target_include_directories(test_bin PRIVATE "cpuinfo/include")
