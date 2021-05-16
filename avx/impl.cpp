@@ -3,7 +3,7 @@
 
 namespace avx2{
 
-std::array<double, 4> mul_impl(std::array<double, 4> x, std::array<double, 4> y)
+std::array<double, 4> mul(std::array<double, 4> x, std::array<double, 4> y)
 {
     std::cout << "AVX IMPL\n";
     auto x_vec = __m256d{x[0], x[1], x[2], x[3]};
