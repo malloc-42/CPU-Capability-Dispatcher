@@ -1,6 +1,4 @@
 #include <cpuinfo.h>
-#include "cpu/interface.h"
-#include "avx/interface.h"
 
 struct Dispatcher
 {
@@ -30,7 +28,4 @@ struct Dispatcher
         };
     }
 
-    Arr mul(Arr x, Arr y){
-        return binary_dispatch(avx2::mul, cpu::mul)(x, y);
-    }
 };
