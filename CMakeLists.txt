@@ -2,6 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.5 FATAL_ERROR)
 
 project (CPUDispatch)
 
+add_subdirectory (array)
 add_subdirectory (cpu)
 add_subdirectory (avx)
 add_subdirectory (cpuinfo EXCLUDE_FROM_ALL)

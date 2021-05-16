@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include <array_interface.h>
 
 namespace cpu
 {
