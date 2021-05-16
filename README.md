@@ -25,7 +25,7 @@ $ ./test_bin  # Run tests
 
 ## Usage
 
-As of Release 0.0.1, the Dispatcher supports arrays of size 4 and [operators](#supported-operators) operation for both AVX2 and SIMT instruction sets. Here is a sample code to start with: (also check `main.cpp` for complete template)
+As of Release 0.0.1, the Dispatcher supports arrays of size 4 and [these operators](#supported-operators) for both AVX2 and SIMT instruction sets. Here is a sample code to start with: (also check `main.cpp` for complete template)
 
 Let's start with the necessary header files.
 
