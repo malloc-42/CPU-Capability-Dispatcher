@@ -21,8 +21,8 @@ int main()
     Dispatcher cpu_dispatcher = Dispatcher{};
     cpu_dispatcher.use_cpu = true;
 
-    array x_arr{/*numel=*/6, /*fill_value=*/5};
-    array y_arr{/*numel=*/6, /*fill_value=*/4};
+    array x_arr{/*numel=*/12, /*fill_value=*/5};
+    array y_arr{/*numel=*/12, /*fill_value=*/4};
 
     auto out_arr_avx = op_dispatcher.binary_dispatch(avx2::mul, cpu::mul)(x_arr, y_arr);
     auto out_arr_cpu = cpu_dispatcher.binary_dispatch(avx2::mul, cpu::mul)(x_arr, y_arr);
